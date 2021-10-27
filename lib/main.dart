@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_15092021/demo_basic_provider.dart';
 
+import 'demo_changenotifier.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Demo Provider"),
         ),
-        body: DemoBasicProvider(),
+        body: DemoChangeNotifier(),
       ),
     );
   }

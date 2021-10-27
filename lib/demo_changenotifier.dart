@@ -4,6 +4,11 @@ class Count extends ChangeNotifier{
   late int value;
 
   Count({required this.value});
+
+  void increase(){
+    value += 1;
+    notifyListeners();
+  }
 }
 
 class DemoChangeNotifier extends StatelessWidget {
@@ -28,7 +33,7 @@ class DemoWidget extends StatelessWidget {
             Text("Count : ${count.value}"),
             ElevatedButton(
                 onPressed: (){
-
+                    count.increase();
                 },
                 child: Text("Increase count")
             )
