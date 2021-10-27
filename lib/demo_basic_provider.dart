@@ -45,7 +45,11 @@ class TextAge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Consumer<Person>(
+      builder: (context , person , child){
+        return Text(person.age.toString());
+      },
+    );
   }
 }
 
